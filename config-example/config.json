@@ -1,0 +1,24 @@
+{
+  "SqlConnectionString": "Data Source=fake-sql.vfltest.dk;Integrated Security=True",
+  "DecryptionCertificate" : {
+    "Thumbprint": "00000eb56ef4fac1c432667d9949910143564a71",  
+    "Pfx": "fakedecryption.pfx",  
+    "PfxPassword": "fakepassword"
+  },
+  "SigningCertificate" : {
+    "Thumbprint": "00000fa486ea7d6be405013209ec4aa9f24a9d0b",  
+    "Pfx": "fakesigning.pfx",  
+    "PfxPassword": "fakepassword"
+  },
+  "SslCertificate" : {
+    "Thumbprint": "000001b275ca7809c66ceb862bb7f3a5d0545665",  
+    "Pfx": "fakessl.pfx",  
+    "PfxPassword": "fakepassword"
+  },
+  "ServiceCredential": {
+    "Username": "fake.domain\\svc_Adfs2016",
+    "Password": "fakepassword"
+  },
+  "ServiceName": "fake-idp.vfltest.dk",
+  "ServiceDisplayName": "fake-idp.vfltest.dk (2016)"
+}
