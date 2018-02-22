@@ -35,8 +35,10 @@ Set-AdfsProperties -AutoCertificateRollover $false
 Add-AdfsCertificate -CertificateType Token-Signing -Thumbprint $config.SigningCertificate.Thumbprint -IsPrimary
 Add-AdfsCertificate -CertificateType Token-Decrypting -Thumbprint $config.DecryptionCertificate.Thumbprint -IsPrimary 
 
-#Set-AdfsProperties -EnableIdPInitiatedSignonPage $true
+### Customizations
+# Enabled IdPInitiatedSignOn
+Set-AdfsProperties -EnableIdPInitiatedSignonPage $true
 # Authenticate with unqualified samAccountNames via WS-Trust
 # See https://technet.microsoft.com/en-us/library/dn636121(v=ws.11).aspx
-#Set-AdfsClaimsProviderTrust -TargetIdentifier "AD AUTHORITY" -AlternateLoginID samAccountName -LookupForests prod.dli
+Set-AdfsClaimsProviderTrust -TargetIdentifier "AD AUTHORITY" -AlternateLoginID samAccountName -LookupForests prod.dli
 
