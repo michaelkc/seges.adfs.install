@@ -11,6 +11,7 @@ Import-Module PKI
 
 ### Install ADFS v2016 Windows feature
 Dism /online /Enable-Feature /FeatureName:IdentityServer-SecurityTokenService /All
+#Install-windowsfeature adfs-federation -IncludeManagementTools
 
 $config = Get-Content .\config.json | ConvertFrom-Json
 
